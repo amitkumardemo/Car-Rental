@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        #rental-form {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        form label {
+            font-size: 14px;
+            color: #666;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        form input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        form input:focus {
+            border-color: #007BFF;
+            outline: none;
+        }
+
+        button {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            width: 100%;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Responsive design */
+        @media (max-width: 480px) {
+            #rental-form {
+                padding: 20px;
+            }
+
+            h2 {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section id="rental-form">
+        <h2>Contact</h2>
+        <form id="rent-form" onsubmit="handleSubmit(event)">
+            <label for="customer-name">Enter Name:</label>
+            <input type="text" id="customer-name" name="name" required>
+
+            <label for="customer-email">Email:</label>
+            <input type="email" id="customer-email" name="email" required>
+
+            <label for="customer-phone">Mob:</label>
+            <input type="tel" id="customer-phone" name="phone" required pattern="[0-9]{10}" placeholder="10-digit phone number">
+
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault(); // Prevents the default form submission behavior
+            alert('Thanks for contacting us!');
+        }
+    </script>
+</body>
+</html>
